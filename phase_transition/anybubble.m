@@ -27,7 +27,7 @@ AnyBubbleVersion = "2.0.4"
 FindBubble::usage = "FindBubble[potential, fieldname, truevacuum, falsevacuum] computes instanton profiles for multidimensional fields"
 
 Options[FindBubble] = {Verbose -> False,
-		       SpaceTimeDimension -> 4,
+		       SpaceTimeDimension -> 3,
 		       StartAnalyticFraction -> 1/100,
 		       EndAnalyticFraction -> 1/100,
 		       MaxIntervalGrowth -> 30,
