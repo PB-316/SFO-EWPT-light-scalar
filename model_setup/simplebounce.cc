@@ -217,7 +217,7 @@ BounceCalculator::BounceCalculator() : Scalarfield(1, 100, 1., 4) {
 	derivMax = 1e-2;
 	tend0 = 0.05;
 	tend1 = 0.4;
-	maxN = 1000;
+	maxN = 10000;
 }
 
 BounceCalculator::~BounceCalculator(){

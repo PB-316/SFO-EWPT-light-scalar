@@ -127,12 +127,6 @@ class model(gp.generic_potential):
         Tnuc = self.Tn
         return self.truevev(T=Tnuc)/Tnuc
 
-    def strength_Tn(self):
-        if not self.Tn:
-            self.findTn()
-        Tnuc = self.Tn
-        return self.truevev(T=Tnuc)/Tnuc
-
     def beta_over_H_at_Tn(self):
         "Ridders algorithm"
         if not self.Tn:
@@ -220,6 +214,13 @@ class model1d(gp.generic_potential):
         Tn1 = self.Tc - (i-1)*eps
         self.Tn = optimize.brentq(nuclea_trigger,Tn1, Tn1-eps,disp=False)
 
+    def strength_Tn(self):
+        if not self.Tn:
+            self.findTn()
+        Tnuc = self.Tn
+        return self.truevev(T=Tnuc)/Tnuc
+
+
     def beta_over_H_at_Tn(self):
         "Ridders algorithm"
         if not self.Tn:
@@ -240,9 +241,9 @@ class model1d(gp.generic_potential):
         if self.Tc-Tnuc >=0.002: eps = 0.001
         else: eps=0.99*(self.Tc-Tnuc)/2
         def deltaV(T):
-            falsev=[0,m.Spath([0],T)]
-            truev=m.findMinimum(T=T)
-            return m.Vtot(falsev,T)-m.Vtot(truev,T)
+            falsev=[0,self.Spath([0],T)]
+            truev=self.findMinimum(T=T)
+            return self.Vtot(falsev,T)-self.Vtot(truev,T)
         dev = (deltaV(Tnuc-2*eps) - 8.*deltaV(Tnuc-eps) + 8.*deltaV(Tnuc+eps) - deltaV(Tnuc+2.*eps))/(12.*eps) # derivative of deltaV w.r.t T at Tn
         latent=deltaV(Tnuc) - 0.25*Tnuc*dev
         rho_crit = np.pi**2*106.75*Tnuc**4/30.
