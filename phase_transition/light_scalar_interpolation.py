@@ -7,7 +7,7 @@ Requires package of cosmoTransitions.
 import numpy as np
 from cosmoTransitions import generic_potential as gp
 from cosmoTransitions import pathDeformation as pd
-from scipy import optimize
+from scipy import interpolate, optimize
 
 # -----------------------------------------------------------------
 # Physical Constants
@@ -104,33 +104,44 @@ class model(gp.generic_potential):
         tobj = pd.fullTunneling([[self.truevev(T=T), self.Spath([self.truevev(T=T)],T)],[1e-100, self.Spath([1e-100],T)]], V_, dV_)
         return tobj
 
-    def findTn(self):
+    def S_over_T(self,T):
+        Tv=T
+        ST=self.tunneling_at_T(T=Tv).action/Tv
+        return ST
+
+    def trace_action(self):
         if self.strength >= 12:
             Tmax = 0.95*self.Tc
         elif self.strength >= 4:
             Tmax = 0.99*self.Tc
         else:
             Tmax = self.Tc
-        eps = 0.01
+        eps = 0.005
         if self.mS <=0.1:
             first=0.05
         elif self.mS<=1:
             first=0.02
         else:
             first=0.01
-        def nuclea_trigger(Tv):
-            ST = self.tunneling_at_T(T=Tv).action/Tv
-            return ST - 140.
+        list = []
         for i in range(0,1000):
             Ttest=Tmax-first-i*eps
             print("Tunneling at T=" + str(Ttest))
-            trigger=nuclea_trigger(Ttest)
-            print("S3/T-140="+ str(trigger))
-            if trigger< 0.:
+            trigger=self.S_over_T(Ttest)
+            print("S3/T="+ str(trigger))
+            list.append([Ttest,trigger])
+            if trigger< 140.:
                 break
         Tmin = Ttest
         print("Tnuc should be within " + str(Tmin) + " and " + str(Tmin+eps))
-        self.Tn = optimize.brentq(nuclea_trigger,Tmin+eps, Tmin,disp=False,xtol=1e-5,rtol=1e-6)
+        self.action_trace_data=np.array(list).transpose().tolist()
+
+    def findTn(self):
+        self.trace_action()
+        Tlist=self.action_trace_data[0]
+        trigger_list=[i-140 for i in self.action_trace_data[1]]
+        Action_drop = interpolate.interp1d(Tlist,trigger_list, kind='cubic')
+        self.Tn = optimize.brentq(Action_drop, Tlist[-2], Tlist[-1],disp=False,xtol=1e-5,rtol=1e-6)
 
     def strength_Tn(self):
         if not self.Tn:
@@ -143,27 +154,23 @@ class model(gp.generic_potential):
         if not self.Tn:
             self.findTn()
         Tnuc = self.Tn
-        print("Tnuc = " + str(Tnuc))
-        if self.Tc-Tnuc >=0.002:
-            eps = 0.001
-        elif self.Tc-Tnuc >= 0.0002:
-            eps=0.0001
-        else: eps=0.00001
-        def SoverT(Tv):
-            ST = self.tunneling_at_T(T=Tv).action/Tv
-            return ST
-        dev = (SoverT(Tnuc-2.*eps) - 8.*SoverT(Tnuc-eps) + 8.*SoverT(Tnuc+eps)- SoverT(Tnuc+2.*eps))/(12.*eps)
+        if self.action_trace_data==[]:
+            self.trace_action()
+        Tlist=self.action_trace_data[0]
+        trigger_list=[i-140 for i in self.action_trace_data[1]]
+        Action_drop = interpolate.interp1d(Tlist,trigger_list, kind='cubic')
+        eps = 0.5*(Tnuc-Tlist[-1])*0.9
+        dev = (Action_drop(Tnuc-2.*eps) - 8.*Action_drop(Tnuc-eps) + 8.*Action_drop(Tnuc+eps)- Action_drop(Tnuc+2.*eps))/(12.*eps)
         return dev*Tnuc
+
 
     def alpha(self):
         if not self.Tn:
             self.findTn()
         Tnuc = self.Tn
-        if self.Tc-Tnuc >=0.002: eps = 0.001
-        else: eps=0.99*(self.Tc-Tnuc)/2
         def deltaV(T):
             falsev=[0,self.Spath([0],T)]
-            truev=self.findMinimum(T=T)
+            truev=self.truevev(T)
             return self.Vtot(falsev,T)-self.Vtot(truev,T)
         dev = (deltaV(Tnuc-2*eps) - 8.*deltaV(Tnuc-eps) + 8.*deltaV(Tnuc+eps) - deltaV(Tnuc+2.*eps))/(12.*eps) # derivative of deltaV w.r.t T at Tn
         latent=deltaV(Tnuc) - 0.25*Tnuc*dev
