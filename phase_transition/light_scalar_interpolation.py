@@ -6,6 +6,7 @@ Requires package of cosmoTransitions.
 
 import numpy as np
 from cosmoTransitions import generic_potential as gp
+from cosmoTransitions import helper_functions
 from cosmoTransitions import pathDeformation as pd
 from scipy import interpolate, optimize
 
@@ -67,6 +68,7 @@ class model(gp.generic_potential):
         self.Tc = self.T0*np.sqrt((self.Deff * self.lmeff)/(-self.E**2 + self.Deff*self.lmeff))
         self.strength = 2*self.E/self.lmeff
         self.Tn = False
+        self.Tn1d = False
         self.non_restore_trigger = self.Deff * self.lmeff - self.E**2
 
     def Vtot(self, X, T, include_radiation=True):
@@ -81,6 +83,21 @@ class model(gp.generic_potential):
         y += 0.5*self.muS2*phi2**2 - 0.5 * self.A * (phi1**2 + self.cs * T2 - 2 * v**2)*phi2
         return y
 
+    def Vtot1d(self, X, T, include_radiation=True):
+        T = np.asanyarray(T, dtype=float)
+        X = np.asanyarray(X, dtype=float)
+        T2 = (T*T) + 1e-100
+        phi1 = X[...,0]
+        y = self.Deff * T2 * phi1**2 - (0.5*self.muH2 - 0.5 * v**2 * self.A**2 / (self.muS2))*phi1**2
+        y += - self.E * T * phi1 **3
+        y += 0.25 * self.lmeff * phi1**4
+        return y
+
+    def gradV1d(self,X,T):
+        f=helper_functions.gradientFunction(self.Vtot1d, self.x_eps,1,self.deriv_order)
+        T = np.asanyarray(T)[...,np.newaxis, np.newaxis]
+        return f(X,T,False)
+
     def truevev(self,T):
         assert T < self.Tc
         nominator = 3.* T * self.E + np.sqrt(9.*self.E**2 * T**2 + 8.*self.Deff * (self.T0**2 - T**2)*self.lmeff)
@@ -93,6 +110,15 @@ class model(gp.generic_potential):
         phi1 = X[...,0]
         T2 = (T*T) + 1e-100
         return 0.5*self.A*(phi1**2 + self.cs * T2 - 2 * v**2)/self.muS2
+
+    def tunneling_at_T_1d(self, T):
+        assert T < self.Tc
+        def V_(x, T=T, V=self.Vtot1d):
+            return V(x,T)
+        def dV_(x, T=T, dV=self.gradV1d):
+            return dV(x,T)
+        tobj = pd.fullTunneling([[self.truevev(T)],[0.]],V_,dV_)
+        return tobj
 
     def tunneling_at_T(self, T):
         assert T < self.Tc
@@ -109,23 +135,35 @@ class model(gp.generic_potential):
         ST=self.tunneling_at_T(T=Tv).action/Tv
         return ST
 
-    def trace_action(self):
-        if self.strength >= 12:
-            Tmax = 0.95*self.Tc
-        elif self.strength >= 4:
-            Tmax = 0.99*self.Tc
-        else:
-            Tmax = self.Tc
-        eps = 0.005
-        if self.mS <=0.1:
-            first=0.05
+    def findTn_1d(self):
+        print("Finding nucleation temperature for 1d case...")
+        if self.mS<=0.1:
+            eps = 0.03
         elif self.mS<=1:
-            first=0.02
+            eps=0.02
+        else: eps=0.01
+        def nuclea_trigger(Tv):
+            ST = self.tunneling_at_T_1d(T=Tv).action/Tv
+            return ST - 140.
+        for i in range(1,1000):
+            if nuclea_trigger(self.Tc - i*eps) <= 0.:
+                break
+        Tn1 = self.Tc - (i-1)*eps
+        self.Tn1d = optimize.brentq(nuclea_trigger,Tn1-1e-10, Tn1-eps,disp=False)
+
+    def trace_action(self):
+        if self.mS <= 0.05:
+            Tmax = self.Tc - 0.05
+        elif self.mS <= 1.0:
+            if self.Tn1d == False:
+                self.findTn_1d()
+            Tmax = self.Tn1d
         else:
-            first=0.01
+            Tmax = self.Tc - 0.01
+        eps = 0.002
         list = []
         for i in range(0,1000):
-            Ttest=Tmax-first-i*eps
+            Ttest=Tmax-i*eps
             print("Tunneling at T=" + str(Ttest))
             trigger=self.S_over_T(Ttest)
             print("S3/T="+ str(trigger))
@@ -139,14 +177,23 @@ class model(gp.generic_potential):
     def findTn(self):
         self.trace_action()
         Tlist=self.action_trace_data[0]
-        trigger_list=[i-140 for i in self.action_trace_data[1]]
-        Action_drop = interpolate.interp1d(Tlist,trigger_list, kind='cubic')
-        self.Tn = optimize.brentq(Action_drop, Tlist[-2], Tlist[-1],disp=False,xtol=1e-5,rtol=1e-6)
+        log_action = [np.log10(i)-np.log10(140) for i in self.action_trace_data[1]]
+        # trigger_list=[i-140 for i in self.action_trace_data[1]]
+        # Action_drop = interpolate.interp1d(Tlist,trigger_list, kind='cubic')
+        function = interpolate.interp1d(Tlist, log_action, kind='cubic')
+        # self.Tn = optimize.brentq(Action_drop, Tlist[-2], Tlist[-1],disp=False,xtol=1e-5,rtol=1e-6)
+        self.Tn = optimize.brentq(function, Tlist[-2], Tlist[-1],disp=False,xtol=1e-5,rtol=1e-6)
 
     def strength_Tn(self):
         if not self.Tn:
             self.findTn()
         Tnuc = self.Tn
+        return self.truevev(T=Tnuc)/Tnuc
+
+    def strength_Tn1d(self):
+        if not self.Tn1d:
+            self.findTn_1d()
+        Tnuc = self.Tn1d
         return self.truevev(T=Tnuc)/Tnuc
 
     def beta_over_H_at_Tn(self):
@@ -163,115 +210,28 @@ class model(gp.generic_potential):
         dev = (Action_drop(Tnuc-2.*eps) - 8.*Action_drop(Tnuc-eps) + 8.*Action_drop(Tnuc+eps)- Action_drop(Tnuc+2.*eps))/(12.*eps)
         return dev*Tnuc
 
-
-    def alpha(self):
-        if not self.Tn:
-            self.findTn()
-        Tnuc = self.Tn
-        def deltaV(T):
-            falsev=[0,self.Spath([0],T)]
-            truev=self.truevev(T)
-            return self.Vtot(falsev,T)-self.Vtot(truev,T)
-        dev = (deltaV(Tnuc-2*eps) - 8.*deltaV(Tnuc-eps) + 8.*deltaV(Tnuc+eps) - deltaV(Tnuc+2.*eps))/(12.*eps) # derivative of deltaV w.r.t T at Tn
-        latent=deltaV(Tnuc) - 0.25*Tnuc*dev
-        rho_crit = np.pi**2*106.75*Tnuc**4/30.
-        return latent/rho_crit
-
-class model1d(gp.generic_potential):
-    def init(self, mS, sintheta):
-        self.Ndim = 1
-        self.Tmax = 100
-        self.mS = mS
-        self.sintheta = sintheta
-        self.lm = lm(self.mS, self.sintheta)
-        self.A = A(self.mS,self.sintheta)
-        self.muH2 = muH2(self.mS,self.sintheta)
-        self.muS2 = muS2(self.mS,self.sintheta)
-        self.g = 0.65
-        self.gY = 0.36
-        self.yt = 0.9945
-        self.D = (3*self.g**2 + self.gY**2 + 4*self.yt**2)/16.
-        self.E = (2*self.g**3+(self.g**2 + self.gY**2)**(3/2))/(48*np.pi)
-        self.cs = 1./3
-        self.Deff = self.D - self.cs * self.A**2/(4.*self.muS2)
-        self.lmeff = self.lm - self.A**2/(2*self.muS2)
-        self.T0 = np.sqrt(0.5*self.muH2 - v**2 * self.A**2 /(2*self.muS2))/np.sqrt(self.D - self.cs*self.A**2/(4*self.muS2))
-        self.Tc = self.T0*np.sqrt((self.Deff * self.lmeff)/(-self.E**2 + self.Deff*self.lmeff))
-        self.strength = 2*self.E/self.lmeff
-        self.Tn = False
-
-    def Vtot(self, X, T, include_radiation = True):
-        T = np.asanyarray(T, dtype=float)
-        X = np.asanyarray(X, dtype=float)
-        T2 = (T*T) + 1e-100
-        phi1 = X[...,0]
-        y = self.Deff * T2 * phi1**2 - (0.5*self.muH2 - 0.5 * v**2 * self.A**2 / (self.muS2))*phi1**2
-        y += - self.E * T * phi1 **3
-        y += 0.25 * self.lmeff * phi1**4
-        return y
-
-    def truevev(self,T):
-        assert T < self.Tc
-        nominator = 3.* T * self.E + np.sqrt(9.*self.E**2 * T**2 + 8.*self.Deff * (self.T0**2 - T**2)*self.lmeff)
-        denominator = 2.*self.lmeff
-        return nominator/denominator
-
-    def tunneling_at_T(self, T):
-        assert T < self.Tc
-        def V_(x, T=T, V=self.Vtot):
-            return V(x,T)
-        def dV_(x, T=T, dV=self.gradV):
-            return dV(x,T)
-        tobj = pd.fullTunneling([[self.truevev(T)],[1e-100]],V_,dV_)
-        return tobj
-
-    def findTn(self):
-        # eps = 0.01
-        if self.mS <=0.1:
-            eps=0.03
-        elif self.mS<=1:
-            eps=0.02
-        else:
-            eps=0.01
-        def nuclea_trigger(Tv):
-            ST = self.tunneling_at_T(T=Tv).action/Tv
-            return ST - 140.
-        for i in range(1,1000):
-            if nuclea_trigger(self.Tc - i*eps) <= 0.:
-                break
-        Tn1 = self.Tc - (i-1)*eps
-        self.Tn = optimize.brentq(nuclea_trigger,Tn1, Tn1-eps,disp=False)
-
-    def strength_Tn(self):
-        if not self.Tn:
-            self.findTn()
-        Tnuc = self.Tn
-        return self.truevev(T=Tnuc)/Tnuc
-
-
-    def beta_over_H_at_Tn(self):
+    def beta_over_H_at_Tn_1d(self):
         "Ridders algorithm"
-        if not self.Tn:
-            self.findTn()
-        Tnuc = self.Tn
-        if self.Tc-Tnuc >=0.002: eps = 0.001
-        elif self.Tc-Tnuc >= 0.0002: eps = 0.0002
-        else: eps=0.00001
+        if not self.Tn1d:
+            self.findTn_1d()
+        Tnuc = self.Tn1d
+        eps=1e-5
         def SoverT(Tv):
-            ST = self.tunneling_at_T(T=Tv).action/Tv
+            ST = self.tunneling_at_T_1d(T=Tv).action/Tv
             return ST
         dev = (SoverT(Tnuc-2.*eps) - 8.*SoverT(Tnuc-eps) + 8.*SoverT(Tnuc+eps)- SoverT(Tnuc+2.*eps))/(12.*eps)
         return dev*Tnuc
 
+
     def alpha(self):
         if not self.Tn:
             self.findTn()
         Tnuc = self.Tn
         if self.Tc-Tnuc >=0.002: eps = 0.001
-        else: eps=0.99*(self.Tc-Tnuc)/2
+        else: eps=0.0001
         def deltaV(T):
             falsev=[0,self.Spath([0],T)]
-            truev=self.findMinimum(T=T)
+            truev=self.truevev(T)
             return self.Vtot(falsev,T)-self.Vtot(truev,T)
         dev = (deltaV(Tnuc-2*eps) - 8.*deltaV(Tnuc-eps) + 8.*deltaV(Tnuc+eps) - deltaV(Tnuc+2.*eps))/(12.*eps) # derivative of deltaV w.r.t T at Tn
         latent=deltaV(Tnuc) - 0.25*Tnuc*dev

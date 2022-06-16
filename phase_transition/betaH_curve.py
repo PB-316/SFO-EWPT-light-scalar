@@ -41,8 +41,10 @@ with open(output_file, "w") as f:
             print("mS: " + str(mS) + ", sin theta: " + str(sin_theta(mS)) + "\n")
             betaH_1d = m1d.beta_over_H_at_Tn()
             betaH_2d = m2d.beta_over_H_at_Tn()
+            Tn1d=m1d.Tn
+            Tn2d=m2d.Tn
             print("mS: " + str(mS) + ", sin theta: " + str(sin_theta(mS)) + " beta\/H of 1d: " + str(betaH_1d) + " beta\/H of 2d: " + str(betaH_2d))
-            output = [mS, betaH_1d, betaH_2d]
+            output = [mS, betaH_1d, betaH_2d, Tn1d, Tn2d]
             data_writer.writerow(output)
     else:
         mS_list = np.logspace(np.log10(0.05),np.log10(12),20).tolist()
@@ -52,6 +54,8 @@ with open(output_file, "w") as f:
             print("mS: " + str(mS) + ", sin theta: " + str(sin_theta(mS)) + "\n")
             betaH_1d = m1d.beta_over_H_at_Tn()
             betaH_2d = m2d.beta_over_H_at_Tn()
+            Tn1d=m1d.Tn
+            Tn2d=m2d.Tn
             print("mS: " + str(mS) + ", sin theta: " + str(sin_theta(mS)) + " beta\/H of 1d: " + str(betaH_1d) + " beta\/H of 2d: " + str(betaH_2d))
-            output = [mS, betaH_1d, betaH_2d]
+            output = [mS, betaH_1d, betaH_2d, Tn1d, Tn2d]
             data_writer.writerow(output)

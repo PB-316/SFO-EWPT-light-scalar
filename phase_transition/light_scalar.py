@@ -7,6 +7,7 @@ Requires package of cosmoTransitions.
 import numpy as np
 from cosmoTransitions import generic_potential as gp
 from cosmoTransitions import pathDeformation as pd
+from cosmoTransitions import helper_functions
 from scipy import optimize
 
 # -----------------------------------------------------------------
@@ -255,7 +256,6 @@ class model1d(gp.generic_potential):
             return ST
         dev = (SoverT(Tnuc-2.*eps) - 8.*SoverT(Tnuc-eps) + 8.*SoverT(Tnuc+eps)- SoverT(Tnuc+2.*eps))/(12.*eps)
         return dev*Tnuc
-
     def alpha(self):
         if not self.Tn:
             self.findTn()
@@ -263,10 +263,11 @@ class model1d(gp.generic_potential):
         if self.Tc-Tnuc >=0.002: eps = 0.001
         else: eps=0.99*(self.Tc-Tnuc)/2
         def deltaV(T):
-            falsev=[0,self.Spath([0],T)]
-            truev=self.findMinimum(T=T)
+            falsev=[0.]
+            truev=self.truevev(T)
             return self.Vtot(falsev,T)-self.Vtot(truev,T)
         dev = (deltaV(Tnuc-2*eps) - 8.*deltaV(Tnuc-eps) + 8.*deltaV(Tnuc+eps) - deltaV(Tnuc+2.*eps))/(12.*eps) # derivative of deltaV w.r.t T at Tn
         latent=deltaV(Tnuc) - 0.25*Tnuc*dev
         rho_crit = np.pi**2*106.75*Tnuc**4/30.
         return latent/rho_crit
+    
