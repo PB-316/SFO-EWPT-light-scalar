@@ -21,10 +21,10 @@ class MyModel : public GenericModel{
     double v;
 	  MyModel(){
 	  	  setNphi(2);
-        lambda = 0.130978;
-        A = 0.106204;
-        muH = 0.930846;
-        muS = 0.218138;
+        lambda = 0.1347;
+        A = 0.0001396964;
+        muH = 0.942877;
+        muS = 0.000292618;
         g = 0.65;
         gY = 0.36;
         yt = 0.9945;
@@ -85,7 +85,7 @@ int main() {
   //model.dvdphi(location);
 	bounce.setModel(&model);
 
-	double phiTV[2] = {15.,244.33}; // a point at which V<0
+	double phiTV[2] = {7.,35031.5}; // a point at which V<0
 	double phiFV[2] = {2.46073,0.}; // false vacuum
 	bounce.setVacuum(phiTV, phiFV);
   cout << "potential at the minimum: " << model.vpot(phiFV) << endl;
@@ -93,7 +93,7 @@ int main() {
 	bounce.solve();
 
   bounce.printBounce();
-  bounce.writeBounce("output/BPeg.csv");
+  bounce.writeBounce("output/BPeg_2.csv");
 	// Euclidean action
 	cout << "S_E = " << bounce.action() << endl;
 

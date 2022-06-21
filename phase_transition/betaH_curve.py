@@ -18,13 +18,13 @@ mS_list = np.logspace(np.log10(0.05),np.log10(12),20).tolist()
 mH = 125.13
 
 def sin_theta(mS):
-    return np.sqrt(9*mS**2/(mH**2-mS**2))
+    return np.sqrt(19*mS**2/(mH**2-mS**2))
 
 
 Interpolation= True
 
 if Interpolation:
-    output_file = "./output/betaH_inter.csv"
+    output_file = "./output/betaH_inter_2.csv"
 else:
     output_file = "./output/betaH.csv"
 
