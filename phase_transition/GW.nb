@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    196917,       4106]
-NotebookOptionsPosition[    194937,       4062]
-NotebookOutlinePosition[    195340,       4078]
-CellTagsIndexPosition[    195297,       4075]
+NotebookDataLength[    195465,       4079]
+NotebookOptionsPosition[    193483,       4035]
+NotebookOutlinePosition[    193886,       4051]
+CellTagsIndexPosition[    193843,       4048]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -92,7 +92,7 @@ Cell[BoxData[
       RowBox[{"Range", "[", 
        RowBox[{"lower", ",", "upper", ",", "step"}], "]"}]}], ",", "1"}], 
     "]"}]}], ";"}]], "Input",
- CellLabel->"In[92]:=",ExpressionUUID->"5b60177f-7633-4967-a968-4e4440c72086"],
+ CellLabel->"In[1]:=",ExpressionUUID->"5b60177f-7633-4967-a968-4e4440c72086"],
 
 Cell[CellGroupData[{
 
@@ -100,17 +100,30 @@ Cell["GW in ultrasound wall speed", "Section",ExpressionUUID->"41e8cc54-3ff7-4d6
 
 Cell[CellGroupData[{
 
-Cell["Benchmark 1: mS=5, sin\[Theta]=0.245", "Subsection",ExpressionUUID->"5fc7b59c-be14-4bd6-83fc-9853d16730d4"],
+Cell[TextData[{
+ "Benchmark 1: mS=10mev, ",
+ Cell[BoxData[
+  FormBox[
+   RowBox[{"sin\[Theta]", "=", 
+    RowBox[{"2.1", "\[Times]", 
+     SuperscriptBox["10", 
+      RowBox[{"-", "4"}]]}]}], TraditionalForm]], "None",
+  FormatType->TraditionalForm,ExpressionUUID->
+  "2093d319-cab1-4695-ab42-ba6cece50452"]
+}], "Subsection",ExpressionUUID->"5fc7b59c-be14-4bd6-83fc-9853d16730d4"],
 
 Cell[BoxData[{
  RowBox[{
-  RowBox[{"Tn1", "=", "18.06255999899942"}], ";"}], "\[IndentingNewLine]", 
+  RowBox[{"Tn", "=", "39.619974882131295"}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"\[Alpha]1", "=", "0.12437381924183659"}], 
+  RowBox[{"\[Alpha]", "=", "0.005770712843595349"}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{
-  RowBox[{"\[Beta]H1", "=", "35423.23996669028"}], ";"}]}], "Input",Expression\
-UUID->"f3f14777-4e8b-4933-b1ed-14b689cd8116"],
+  RowBox[{"\[Beta]H", "=", "54608227.79597033"}], 
+  ";"}], "\[IndentingNewLine]", 
+ RowBox[{
+  RowBox[{"vb", "=", "1."}], ";"}]}], "Input",
+ CellLabel->"In[15]:=",ExpressionUUID->"f3f14777-4e8b-4933-b1ed-14b689cd8116"],
 
 Cell[CellGroupData[{
 
@@ -348,764 +361,724 @@ Cell[BoxData[{
            RowBox[{
             RowBox[{"-", "6"}], ",", "6", ",", "1"}], "]"}], ",", "None"}], 
          "}"}]}], "}"}]}]}], "]"}]}]}]}], "Input",
- CellLabel->
-  "In[2123]:=",ExpressionUUID->"2f4d08f0-22c8-4ff8-913d-2d5d599bba20"],
+ CellLabel->"In[19]:=",ExpressionUUID->"2f4d08f0-22c8-4ff8-913d-2d5d599bba20"],
 
 Cell[BoxData[
- FormBox[
-  GraphicsBox[{{{}, {}, 
-     TagBox[
-      {RGBColor[0.368417, 0.506779, 0.709798], AbsolutePointSize[4], 
-       AbsoluteThickness[1.6], Opacity[1.], LineBox[CompressedData["
-1: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
-        "]]},
-      Annotation[#, "Charting`Private`Tag$121936#1"]& ]}, {}},
-   AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
-   Axes->{False, False},
-   AxesLabel->{None, None},
-   AxesOrigin->{0, -13.108117597847377`},
-   AxesStyle->Directive[
-     AbsoluteThickness[1], 
-     GrayLevel[0], FontSize -> 14],
-   BaseStyle->{FontSize -> 16, FontFamily -> "Times"},
-   DisplayFunction->Identity,
-   Frame->{{True, True}, {True, True}},
-   FrameLabel->{{
-      FormBox[
-       StyleBox[
-       "\"\\!\\(\\*SubscriptBox[\\(\[CapitalOmega]\\), \
+ GraphicsBox[{{{}, {}, 
+    TagBox[
+     {RGBColor[0.368417, 0.506779, 0.709798], AbsolutePointSize[4], 
+      AbsoluteThickness[1.6], Opacity[1.], LineBox[CompressedData["
+1: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
+       "]]},
+     Annotation[#, "Charting`Private`Tag$5338#1"]& ]}, {}},
+  AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
+  Axes->{False, False},
+  AxesLabel->{None, None},
+  AxesOrigin->{0, -20.79890493557009},
+  AxesStyle->Directive[
+    AbsoluteThickness[1], 
+    GrayLevel[0], FontSize -> 14],
+  BaseStyle->{FontSize -> 16, FontFamily -> "Times"},
+  DisplayFunction->Identity,
+  Frame->{{True, True}, {True, True}},
+  FrameLabel->{{
+     FormBox[
+      StyleBox[
+      "\"\\!\\(\\*SubscriptBox[\\(\[CapitalOmega]\\), \
 \\(GW\\)]\\)\\!\\(\\*StyleBox[SuperscriptBox[\\\"h\\\", \
 \\\"2\\\"],FontSlant->\\\"Italic\\\"]\\)\"", FontFamily -> "Times", FontSize -> 
-        18, StripOnInput -> False], TraditionalForm], None}, {
-      FormBox[
-       StyleBox[
-       "\"\\!\\(\\*StyleBox[\\\"f\\\",FontSlant->\\\"Italic\\\"]\\)(Hz)\"", 
-        FontFamily -> "Times", FontSize -> 18, StripOnInput -> False], 
-       TraditionalForm], None}},
-   FrameStyle->Directive[
-     AbsoluteThickness[1], 
-     GrayLevel[0], FontSize -> 14],
-   FrameTicks->{{{{-31, 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) 
-         Log[5000000000000000000000000000000], -30.698970004336015`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[
-           10000000000000000000000000000000, 3]], -30.522878745280334`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) 
-         Log[2500000000000000000000000000000], -30.397940008672034`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) 
-         Log[2000000000000000000000000000000], -30.301029995663978`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[
-           5000000000000000000000000000000, 3]], -30.221848749616353`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[
-           10000000000000000000000000000000, 7]], -30.154901959985736`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) 
-         Log[1250000000000000000000000000000], -30.09691001300805], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[
-           10000000000000000000000000000000, 9]], -30.045757490560675`], 
-        FormBox["\"\"", TraditionalForm]}, {-30, 
-        FormBox[
-         SuperscriptBox["10", "\"-30\""], TraditionalForm], {0.03, 0}}, {-29, 
-        
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) 
-         Log[50000000000000000000000000000], -28.698970004336015`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[100000000000000000000000000000, 3]], -28.52287874528033], 
-        
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) 
-         Log[25000000000000000000000000000], -28.397940008672034`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) 
-         Log[20000000000000000000000000000], -28.301029995663978`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[50000000000000000000000000000, 3]], -28.22184874961635], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[100000000000000000000000000000, 7]], -28.15490195998574], 
-        
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) 
-         Log[12500000000000000000000000000], -28.096910013008053`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[100000000000000000000000000000, 9]], -28.04575749056067], 
-        
-        FormBox["\"\"", TraditionalForm]}, {-28, 
-        FormBox[
-         SuperscriptBox["10", "\"-28\""], TraditionalForm], {0.03, 0}}, {-27, 
-        
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) 
-         Log[500000000000000000000000000], -26.698970004336015`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[1000000000000000000000000000, 3]], -26.522878745280334`], 
-        
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) 
-         Log[250000000000000000000000000], -26.397940008672034`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) 
-         Log[200000000000000000000000000], -26.301029995663978`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[500000000000000000000000000, 3]], -26.221848749616353`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[1000000000000000000000000000, 7]], -26.15490195998574], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) 
-         Log[125000000000000000000000000], -26.096910013008053`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[1000000000000000000000000000, 9]], -26.04575749056067], 
-        FormBox["\"\"", TraditionalForm]}, {-26, 
-        FormBox[
-         SuperscriptBox["10", "\"-26\""], TraditionalForm], {0.03, 0}}, {-25, 
-        
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) 
-         Log[5000000000000000000000000], -24.698970004336015`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[10000000000000000000000000, 3]], -24.522878745280334`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) 
-         Log[2500000000000000000000000], -24.397940008672034`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) 
-         Log[2000000000000000000000000], -24.301029995663978`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[5000000000000000000000000, 3]], -24.221848749616353`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[10000000000000000000000000, 7]], -24.15490195998574], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) 
-         Log[1250000000000000000000000], -24.096910013008053`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[10000000000000000000000000, 9]], -24.04575749056067], 
-        FormBox["\"\"", TraditionalForm]}, {-24, 
-        FormBox[
-         SuperscriptBox["10", "\"-24\""], TraditionalForm], {0.03, 0}}, {-23, 
-        
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) 
-         Log[50000000000000000000000], -22.698970004336015`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[100000000000000000000000, 3]], -22.522878745280334`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) 
-         Log[25000000000000000000000], -22.397940008672034`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) 
-         Log[20000000000000000000000], -22.301029995663978`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[50000000000000000000000, 3]], -22.221848749616353`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[100000000000000000000000, 7]], -22.15490195998574], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) 
-         Log[12500000000000000000000], -22.096910013008053`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[100000000000000000000000, 9]], -22.04575749056067], 
-        FormBox["\"\"", TraditionalForm]}, {-22, 
-        FormBox[
-         SuperscriptBox["10", "\"-22\""], TraditionalForm], {0.03, 0}}, {-21, 
-        
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) 
-         Log[500000000000000000000], -20.698970004336015`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[1000000000000000000000, 3]], -20.522878745280334`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) 
-         Log[250000000000000000000], -20.397940008672034`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) 
-         Log[200000000000000000000], -20.301029995663978`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[500000000000000000000, 3]], -20.221848749616353`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[1000000000000000000000, 7]], -20.154901959985743`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) 
-         Log[125000000000000000000], -20.096910013008053`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[1000000000000000000000, 9]], -20.045757490560675`], 
-        FormBox["\"\"", TraditionalForm]}, {-20, 
-        FormBox[
-         SuperscriptBox["10", "\"-20\""], TraditionalForm], {0.03, 0}}, {-19, 
-        
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[5000000000000000000], -18.698970004336015`], 
-        
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[10000000000000000000, 3]], -18.522878745280334`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[2500000000000000000], -18.397940008672034`], 
-        
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[2000000000000000000], -18.301029995663978`], 
-        
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[5000000000000000000, 3]], -18.221848749616353`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[10000000000000000000, 7]], -18.15490195998574], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[1250000000000000000], -18.096910013008053`], 
-        
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[10000000000000000000, 9]], -18.04575749056067], 
-        FormBox["\"\"", TraditionalForm]}, {-18, 
-        FormBox[
-         SuperscriptBox["10", "\"-18\""], TraditionalForm], {0.03, 0}}, {-17, 
-        
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[50000000000000000], -16.698970004336015`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[100000000000000000, 3]], -16.522878745280337`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[25000000000000000], -16.397940008672034`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[20000000000000000], -16.301029995663978`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[50000000000000000, 3]], -16.221848749616356`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[100000000000000000, 7]], -16.15490195998574], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[12500000000000000], -16.096910013008056`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[100000000000000000, 9]], -16.04575749056067], 
-        FormBox["\"\"", TraditionalForm]}, {-16, 
-        FormBox[
-         SuperscriptBox["10", "\"-16\""], TraditionalForm], {0.03, 0}}, {-15, 
-        
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[500000000000000], -14.698970004336015`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[1000000000000000, 3]], -14.522878745280336`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[250000000000000], -14.397940008672036`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[200000000000000], -14.30102999566398], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[500000000000000, 3]], -14.221848749616354`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[1000000000000000, 7]], -14.15490195998574], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[125000000000000], -14.096910013008054`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[1000000000000000, 9]], -14.045757490560675`], 
-        FormBox["\"\"", TraditionalForm]}, {-14, 
-        FormBox[
-         SuperscriptBox["10", "\"-14\""], TraditionalForm], {0.03, 0}}, {-13, 
-        
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[5000000000000], -12.698970004336017`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[10000000000000, 3]], -12.522878745280336`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[2500000000000], -12.397940008672036`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[2000000000000], -12.30102999566398], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[5000000000000, 3]], -12.221848749616354`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[10000000000000, 7]], -12.154901959985741`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[1250000000000], -12.096910013008054`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[10000000000000, 9]], -12.045757490560673`], 
-        FormBox["\"\"", TraditionalForm]}, {-12, 
-        FormBox[
-         SuperscriptBox["10", "\"-12\""], TraditionalForm], {0.03, 0}}, {-11, 
-        
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[50000000000], -10.698970004336017`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[100000000000, 3]], -10.522878745280336`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[25000000000], -10.397940008672036`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[20000000000], -10.30102999566398], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[50000000000, 3]], -10.221848749616354`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[100000000000, 7]], -10.154901959985741`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[12500000000], -10.096910013008054`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[100000000000, 9]], -10.045757490560673`], 
-        FormBox["\"\"", TraditionalForm]}, {-10, 
-        FormBox[
-         SuperscriptBox["10", "\"-10\""], TraditionalForm], {0.03, 0}}, {-9, 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[500000000], -8.698970004336019], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[1000000000, 3]], -8.522878745280337], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[250000000], -8.397940008672036], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[200000000], -8.30102999566398], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[500000000, 3]], -8.221848749616354], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[1000000000, 7]], -8.154901959985743], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[125000000], -8.096910013008056], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[1000000000, 9]], -8.045757490560675], 
-        FormBox["\"\"", TraditionalForm]}, {-8, 
-        FormBox[
-         SuperscriptBox["10", "\"-8\""], TraditionalForm], {
-        0.03, 0}}}, {}}, {{{-7, 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[5000000], -6.698970004336018], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[10000000, 3]], -6.5228787452803365`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[2500000], -6.397940008672037], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[2000000], -6.30102999566398], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[5000000, 3]], -6.221848749616355], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[10000000, 7]], -6.154901959985742], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[1250000], -6.096910013008055], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[10000000, 9]], -6.045757490560674], 
-        FormBox["\"\"", TraditionalForm]}, {-6, 
-        FormBox[
-         SuperscriptBox["10", "\"-6\""], TraditionalForm], {0.03, 0}}, {-6, 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[500000], -5.698970004336018], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[1000000, 3]], -5.5228787452803365`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[250000], -5.397940008672037], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[200000], -5.30102999566398], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[500000, 3]], -5.221848749616355], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[1000000, 7]], -5.154901959985742], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[125000], -5.096910013008055], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[1000000, 9]], -5.045757490560675], 
-        FormBox["\"\"", TraditionalForm]}, {-5, 
-        FormBox[
-         SuperscriptBox["10", "\"-5\""], TraditionalForm], {0.03, 0}}, {-5, 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[50000], -4.698970004336018], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[100000, 3]], -4.522878745280337], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[25000], -4.397940008672037], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[20000], -4.30102999566398], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[50000, 3]], -4.221848749616356], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[100000, 7]], -4.154901959985742], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[12500], -4.096910013008055], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[100000, 9]], -4.045757490560674], 
-        FormBox["\"\"", TraditionalForm]}, {-4, 
-        FormBox[
-         SuperscriptBox["10", "\"-4\""], TraditionalForm], {0.03, 0}}, {-4, 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[5000], -3.6989700043360187`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[10000, 3]], -3.522878745280337], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[2500], -3.397940008672037], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[2000], -3.301029995663981], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[5000, 3]], -3.221848749616356], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[10000, 7]], -3.1549019599857426`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[1250], -3.096910013008056], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[10000, 9]], -3.045757490560675], 
-        FormBox["\"\"", TraditionalForm]}, {-3, 
-        FormBox[
-         SuperscriptBox["10", "\"-3\""], TraditionalForm], {0.03, 0}}, {-3, 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[500], -2.6989700043360183`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[1000, 3]], -2.5228787452803374`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[250], -2.397940008672037], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[200], -2.301029995663981], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[500, 3]], -2.221848749616356], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[1000, 7]], -2.1549019599857426`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[125], -2.0969100130080562`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[1000, 9]], -2.045757490560675], 
-        FormBox["\"\"", TraditionalForm]}, {-2, 
-        FormBox[
-         SuperscriptBox["10", "\"-2\""], TraditionalForm], {0.03, 0}}, {-2, 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[50], -1.6989700043360185`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[100, 3]], -1.5228787452803374`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[25], -1.3979400086720373`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[20], -1.301029995663981], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[50, 3]], -1.2218487496163561`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[100, 7]], -1.1549019599857429`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[25, 2]], -1.0969100130080562`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[10]^(-1) Log[
-           Rational[100, 9]], -1.0457574905606748`], 
-        FormBox["\"\"", TraditionalForm]}, {-1, 
-        FormBox[
-         SuperscriptBox["10", "\"-1\""], TraditionalForm], {0.03, 0}}, {-1, 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[5]/Log[10], -0.6989700043360186], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[
-           Rational[10, 3]]/Log[10], -0.5228787452803375], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[
-           Rational[5, 2]]/Log[10], -0.39794000867203755`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[2]/Log[10], -0.30102999566398114`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[
-           Rational[5, 3]]/Log[10], -0.22184874961635634`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[
-           Rational[10, 7]]/Log[10], -0.15490195998574316`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[
-           Rational[5, 4]]/Log[10], -0.0969100130080564], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[-Log[
-           Rational[10, 9]]/Log[10], -0.04575749056067514], 
-        FormBox["\"\"", TraditionalForm]}, {0, 
-        FormBox["1", TraditionalForm], {0.03, 0}}, {0, 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[Log[2]/Log[10], 0.30102999566398114`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[Log[3]/Log[10], 0.4771212547196624], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[Log[4]/Log[10], 0.6020599913279623], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[Log[5]/Log[10], 0.6989700043360186], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[Log[6]/Log[10], 0.7781512503836435], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[Log[7]/Log[10], 0.8450980400142567], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[Log[8]/Log[10], 0.9030899869919433], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[Log[9]/Log[10], 0.9542425094393248], 
-        FormBox["\"\"", TraditionalForm]}, {1, 
-        FormBox["10", TraditionalForm], {0.03, 0}}, {1, 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[Log[10]^(-1) Log[20], 1.301029995663981], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[Log[10]^(-1) Log[30], 1.4771212547196622`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[Log[10]^(-1) Log[40], 1.602059991327962], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[Log[10]^(-1) Log[50], 1.6989700043360185`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[Log[10]^(-1) Log[60], 1.7781512503836432`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[Log[10]^(-1) Log[70], 1.8450980400142567`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[Log[10]^(-1) Log[80], 1.903089986991943], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[Log[10]^(-1) Log[90], 1.9542425094393245`], 
-        FormBox["\"\"", TraditionalForm]}, {2, 
-        FormBox[
-         SuperscriptBox["10", "\"2\""], TraditionalForm], {0.03, 0}}, {2, 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[Log[10]^(-1) Log[200], 2.301029995663981], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[Log[10]^(-1) Log[300], 2.477121254719662], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[Log[10]^(-1) Log[400], 2.602059991327962], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[Log[10]^(-1) Log[500], 2.6989700043360183`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[Log[10]^(-1) Log[600], 2.778151250383643], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[Log[10]^(-1) Log[700], 2.8450980400142565`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[Log[10]^(-1) Log[800], 2.903089986991943], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[Log[10]^(-1) Log[900], 2.9542425094393243`], 
-        FormBox["\"\"", TraditionalForm]}, {3, 
-        FormBox[
-         SuperscriptBox["10", "\"3\""], TraditionalForm], {0.03, 0}}, {3, 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[Log[10]^(-1) Log[2000], 3.301029995663981], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[Log[10]^(-1) Log[3000], 3.4771212547196617`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[Log[10]^(-1) Log[4000], 3.6020599913279616`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[Log[10]^(-1) Log[5000], 3.6989700043360187`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[Log[10]^(-1) Log[6000], 3.7781512503836425`], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[Log[10]^(-1) Log[7000], 3.845098040014256], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[Log[10]^(-1) Log[8000], 3.903089986991943], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[Log[10]^(-1) Log[9000], 3.9542425094393243`], 
-        FormBox["\"\"", TraditionalForm]}, {4, 
-        FormBox[
-         SuperscriptBox["10", "\"4\""], TraditionalForm], {0.03, 0}}, {4, 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[Log[10]^(-1) Log[20000], 4.30102999566398], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[Log[10]^(-1) Log[30000], 4.477121254719662], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[Log[10]^(-1) Log[40000], 4.602059991327962], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[Log[10]^(-1) Log[50000], 4.698970004336018], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[Log[10]^(-1) Log[60000], 4.778151250383643], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[Log[10]^(-1) Log[70000], 4.845098040014256], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[Log[10]^(-1) Log[80000], 4.903089986991943], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[Log[10]^(-1) Log[90000], 4.954242509439324], 
-        FormBox["\"\"", TraditionalForm]}, {5, 
-        FormBox[
-         SuperscriptBox["10", "\"5\""], TraditionalForm], {0.03, 0}}, {5, 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[Log[10]^(-1) Log[200000], 5.30102999566398], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[Log[10]^(-1) Log[300000], 5.477121254719662], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[Log[10]^(-1) Log[400000], 5.602059991327962], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[Log[10]^(-1) Log[500000], 5.698970004336018], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[Log[10]^(-1) Log[600000], 5.778151250383643], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[Log[10]^(-1) Log[700000], 5.845098040014256], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[Log[10]^(-1) Log[800000], 5.903089986991943], 
-        FormBox["\"\"", TraditionalForm]}, {
-        NCache[Log[10]^(-1) Log[900000], 5.954242509439324], 
-        FormBox["\"\"", TraditionalForm]}, {6, 
-        FormBox[
-         SuperscriptBox["10", "\"6\""], TraditionalForm], {0.03, 0}}}, {}}},
-   FrameTicksStyle->{
-     Directive[FontFamily -> "Times", FontSize -> 18]},
-   GridLines->{None, None},
-   GridLinesStyle->Directive[
-     AbsoluteThickness[0.5], 
-     Opacity[0.5]],
-   ImagePadding->All,
-   ImageSize->{412.34632873535156`, Automatic},
-   ImageSizeRaw->{{180}, {180}},
-   LabelStyle->{
-     GrayLevel[0]},
-   Method->{"DefaultBoundaryStyle" -> Directive[
-       GrayLevel[0]], 
-     "DefaultGraphicsInteraction" -> {
-      "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
-       "Effects" -> {
-        "Highlight" -> {"ratio" -> 2}, "HighlightPoint" -> {"ratio" -> 2}, 
-         "Droplines" -> {
-          "freeformCursorMode" -> True, 
-           "placement" -> {"x" -> "All", "y" -> "None"}}}}, 
-     "DefaultMeshStyle" -> AbsolutePointSize[6], "ScalingFunctions" -> None, 
-     "CoordinatesToolOptions" -> {"DisplayFunction" -> ({
-         (Identity[#]& )[
-          Part[#, 1]], 
-         (Identity[#]& )[
-          Part[#, 2]]}& ), "CopiedValueFunction" -> ({
-         (Identity[#]& )[
-          Part[#, 1]], 
-         (Identity[#]& )[
-          Part[#, 2]]}& )}},
-   PlotRange->{{-5, 3}, {-25.142509848720508`, -13.741506663682776`}},
-   PlotRangeClipping->True,
-   PlotRangePadding->{{
-      Scaled[0.02], 
-      Scaled[0.02]}, {
-      Scaled[0.05], 
-      Scaled[0.05]}},
-   Ticks->{Automatic, Automatic},
-   TicksStyle->Directive[
-     GrayLevel[0], FontSize -> 12]], TraditionalForm]], "Output",
- CellLabel->
-  "Out[2129]=",ExpressionUUID->"418fdf48-d187-41cd-be35-69172ee23858"]
+       18, StripOnInput -> False], TraditionalForm], None}, {
+     FormBox[
+      StyleBox[
+      "\"\\!\\(\\*StyleBox[\\\"f\\\",FontSlant->\\\"Italic\\\"]\\)(Hz)\"", 
+       FontFamily -> "Times", FontSize -> 18, StripOnInput -> False], 
+      TraditionalForm], None}},
+  FrameStyle->Directive[
+    AbsoluteThickness[1], 
+    GrayLevel[0], FontSize -> 14],
+  FrameTicks->{{{{-31, 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) 
+        Log[5000000000000000000000000000000], -30.698970004336015`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[
+          10000000000000000000000000000000, 3]], -30.522878745280334`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) 
+        Log[2500000000000000000000000000000], -30.397940008672034`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) 
+        Log[2000000000000000000000000000000], -30.301029995663978`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[
+          5000000000000000000000000000000, 3]], -30.221848749616353`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[
+          10000000000000000000000000000000, 7]], -30.154901959985736`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) 
+        Log[1250000000000000000000000000000], -30.09691001300805], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[
+          10000000000000000000000000000000, 9]], -30.045757490560675`], 
+       FormBox["\"\"", TraditionalForm]}, {-30, 
+       FormBox[
+        SuperscriptBox["10", "\"-30\""], TraditionalForm], {0.03, 0}}, {-29, 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) 
+        Log[50000000000000000000000000000], -28.698970004336015`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[100000000000000000000000000000, 3]], -28.52287874528033], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) 
+        Log[25000000000000000000000000000], -28.397940008672034`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) 
+        Log[20000000000000000000000000000], -28.301029995663978`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[50000000000000000000000000000, 3]], -28.22184874961635], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[100000000000000000000000000000, 7]], -28.15490195998574], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) 
+        Log[12500000000000000000000000000], -28.096910013008053`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[100000000000000000000000000000, 9]], -28.04575749056067], 
+       FormBox["\"\"", TraditionalForm]}, {-28, 
+       FormBox[
+        SuperscriptBox["10", "\"-28\""], TraditionalForm], {0.03, 0}}, {-27, 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) 
+        Log[500000000000000000000000000], -26.698970004336015`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[1000000000000000000000000000, 3]], -26.522878745280334`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) 
+        Log[250000000000000000000000000], -26.397940008672034`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) 
+        Log[200000000000000000000000000], -26.301029995663978`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[500000000000000000000000000, 3]], -26.221848749616353`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[1000000000000000000000000000, 7]], -26.15490195998574], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) 
+        Log[125000000000000000000000000], -26.096910013008053`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[1000000000000000000000000000, 9]], -26.04575749056067], 
+       FormBox["\"\"", TraditionalForm]}, {-26, 
+       FormBox[
+        SuperscriptBox["10", "\"-26\""], TraditionalForm], {0.03, 0}}, {-25, 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) 
+        Log[5000000000000000000000000], -24.698970004336015`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[10000000000000000000000000, 3]], -24.522878745280334`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) 
+        Log[2500000000000000000000000], -24.397940008672034`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) 
+        Log[2000000000000000000000000], -24.301029995663978`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[5000000000000000000000000, 3]], -24.221848749616353`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[10000000000000000000000000, 7]], -24.15490195998574], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) 
+        Log[1250000000000000000000000], -24.096910013008053`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[10000000000000000000000000, 9]], -24.04575749056067], 
+       FormBox["\"\"", TraditionalForm]}, {-24, 
+       FormBox[
+        SuperscriptBox["10", "\"-24\""], TraditionalForm], {0.03, 0}}, {-23, 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) 
+        Log[50000000000000000000000], -22.698970004336015`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[100000000000000000000000, 3]], -22.522878745280334`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) 
+        Log[25000000000000000000000], -22.397940008672034`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) 
+        Log[20000000000000000000000], -22.301029995663978`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[50000000000000000000000, 3]], -22.221848749616353`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[100000000000000000000000, 7]], -22.15490195998574], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) 
+        Log[12500000000000000000000], -22.096910013008053`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[100000000000000000000000, 9]], -22.04575749056067], 
+       FormBox["\"\"", TraditionalForm]}, {-22, 
+       FormBox[
+        SuperscriptBox["10", "\"-22\""], TraditionalForm], {0.03, 0}}, {-21, 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[500000000000000000000], -20.698970004336015`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[1000000000000000000000, 3]], -20.522878745280334`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[250000000000000000000], -20.397940008672034`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[200000000000000000000], -20.301029995663978`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[500000000000000000000, 3]], -20.221848749616353`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[1000000000000000000000, 7]], -20.154901959985743`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[125000000000000000000], -20.096910013008053`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[1000000000000000000000, 9]], -20.045757490560675`], 
+       FormBox["\"\"", TraditionalForm]}, {-20, 
+       FormBox[
+        SuperscriptBox["10", "\"-20\""], TraditionalForm], {0.03, 0}}, {-19, 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[5000000000000000000], -18.698970004336015`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[10000000000000000000, 3]], -18.522878745280334`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[2500000000000000000], -18.397940008672034`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[2000000000000000000], -18.301029995663978`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[5000000000000000000, 3]], -18.221848749616353`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[10000000000000000000, 7]], -18.15490195998574], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[1250000000000000000], -18.096910013008053`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[10000000000000000000, 9]], -18.04575749056067], 
+       FormBox["\"\"", TraditionalForm]}, {-18, 
+       FormBox[
+        SuperscriptBox["10", "\"-18\""], TraditionalForm], {0.03, 0}}, {-17, 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[50000000000000000], -16.698970004336015`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[100000000000000000, 3]], -16.522878745280337`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[25000000000000000], -16.397940008672034`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[20000000000000000], -16.301029995663978`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[50000000000000000, 3]], -16.221848749616356`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[100000000000000000, 7]], -16.15490195998574], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[12500000000000000], -16.096910013008056`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[100000000000000000, 9]], -16.04575749056067], 
+       FormBox["\"\"", TraditionalForm]}, {-16, 
+       FormBox[
+        SuperscriptBox["10", "\"-16\""], TraditionalForm], {0.03, 0}}, {-15, 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[500000000000000], -14.698970004336015`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[1000000000000000, 3]], -14.522878745280336`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[250000000000000], -14.397940008672036`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[200000000000000], -14.30102999566398], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[500000000000000, 3]], -14.221848749616354`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[1000000000000000, 7]], -14.15490195998574], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[125000000000000], -14.096910013008054`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[1000000000000000, 9]], -14.045757490560675`], 
+       FormBox["\"\"", TraditionalForm]}, {-14, 
+       FormBox[
+        SuperscriptBox["10", "\"-14\""], TraditionalForm], {0.03, 0}}, {-13, 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[5000000000000], -12.698970004336017`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[10000000000000, 3]], -12.522878745280336`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[2500000000000], -12.397940008672036`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[2000000000000], -12.30102999566398], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[5000000000000, 3]], -12.221848749616354`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[10000000000000, 7]], -12.154901959985741`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[1250000000000], -12.096910013008054`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[10000000000000, 9]], -12.045757490560673`], 
+       FormBox["\"\"", TraditionalForm]}, {-12, 
+       FormBox[
+        SuperscriptBox["10", "\"-12\""], TraditionalForm], {0.03, 0}}, {-11, 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[50000000000], -10.698970004336017`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[100000000000, 3]], -10.522878745280336`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[25000000000], -10.397940008672036`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[20000000000], -10.30102999566398], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[50000000000, 3]], -10.221848749616354`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[100000000000, 7]], -10.154901959985741`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[12500000000], -10.096910013008054`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[100000000000, 9]], -10.045757490560673`], 
+       FormBox["\"\"", TraditionalForm]}, {-10, 
+       FormBox[
+        SuperscriptBox["10", "\"-10\""], TraditionalForm], {0.03, 0}}, {-9, 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[500000000], -8.698970004336019], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[1000000000, 3]], -8.522878745280337], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[250000000], -8.397940008672036], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[200000000], -8.30102999566398], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[500000000, 3]], -8.221848749616354], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[1000000000, 7]], -8.154901959985743], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[125000000], -8.096910013008056], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[1000000000, 9]], -8.045757490560675], 
+       FormBox["\"\"", TraditionalForm]}, {-8, 
+       FormBox[
+        SuperscriptBox["10", "\"-8\""], TraditionalForm], {
+       0.03, 0}}}, {}}, {{{-7, 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[5000000], -6.698970004336018], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[10000000, 3]], -6.5228787452803365`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[2500000], -6.397940008672037], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[2000000], -6.30102999566398], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[5000000, 3]], -6.221848749616355], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[10000000, 7]], -6.154901959985742], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[1250000], -6.096910013008055], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[10000000, 9]], -6.045757490560674], 
+       FormBox["\"\"", TraditionalForm]}, {-6, 
+       FormBox[
+        SuperscriptBox["10", "\"-6\""], TraditionalForm], {0.03, 0}}, {-6, 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[500000], -5.698970004336018], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[1000000, 3]], -5.5228787452803365`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[250000], -5.397940008672037], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[200000], -5.30102999566398], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[500000, 3]], -5.221848749616355], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[1000000, 7]], -5.154901959985742], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[125000], -5.096910013008055], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[1000000, 9]], -5.045757490560675], 
+       FormBox["\"\"", TraditionalForm]}, {-5, 
+       FormBox[
+        SuperscriptBox["10", "\"-5\""], TraditionalForm], {0.03, 0}}, {-5, 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[50000], -4.698970004336018], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[100000, 3]], -4.522878745280337], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[25000], -4.397940008672037], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[20000], -4.30102999566398], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[50000, 3]], -4.221848749616356], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[100000, 7]], -4.154901959985742], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[12500], -4.096910013008055], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[100000, 9]], -4.045757490560674], 
+       FormBox["\"\"", TraditionalForm]}, {-4, 
+       FormBox[
+        SuperscriptBox["10", "\"-4\""], TraditionalForm], {0.03, 0}}, {-4, 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[5000], -3.6989700043360187`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[10000, 3]], -3.522878745280337], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[2500], -3.397940008672037], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[2000], -3.301029995663981], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[5000, 3]], -3.221848749616356], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[10000, 7]], -3.1549019599857426`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[1250], -3.096910013008056], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[10000, 9]], -3.045757490560675], 
+       FormBox["\"\"", TraditionalForm]}, {-3, 
+       FormBox[
+        SuperscriptBox["10", "\"-3\""], TraditionalForm], {0.03, 0}}, {-3, 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[500], -2.6989700043360183`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[1000, 3]], -2.5228787452803374`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[250], -2.397940008672037], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[200], -2.301029995663981], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[500, 3]], -2.221848749616356], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[1000, 7]], -2.1549019599857426`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[125], -2.0969100130080562`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[1000, 9]], -2.045757490560675], 
+       FormBox["\"\"", TraditionalForm]}, {-2, 
+       FormBox[
+        SuperscriptBox["10", "\"-2\""], TraditionalForm], {0.03, 0}}, {-2, 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[50], -1.6989700043360185`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[100, 3]], -1.5228787452803374`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[25], -1.3979400086720373`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[20], -1.301029995663981], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[50, 3]], -1.2218487496163561`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[100, 7]], -1.1549019599857429`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[25, 2]], -1.0969100130080562`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[10]^(-1) Log[
+          Rational[100, 9]], -1.0457574905606748`], 
+       FormBox["\"\"", TraditionalForm]}, {-1, 
+       FormBox[
+        SuperscriptBox["10", "\"-1\""], TraditionalForm], {0.03, 0}}, {-1, 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[5]/Log[10], -0.6989700043360186], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[
+          Rational[10, 3]]/Log[10], -0.5228787452803375], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[
+          Rational[5, 2]]/Log[10], -0.39794000867203755`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[2]/Log[10], -0.30102999566398114`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[
+          Rational[5, 3]]/Log[10], -0.22184874961635634`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[
+          Rational[10, 7]]/Log[10], -0.15490195998574316`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[
+          Rational[5, 4]]/Log[10], -0.0969100130080564], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[-Log[
+          Rational[10, 9]]/Log[10], -0.04575749056067514], 
+       FormBox["\"\"", TraditionalForm]}, {0, 
+       FormBox["1", TraditionalForm], {0.03, 0}}, {0, 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[Log[2]/Log[10], 0.30102999566398114`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[Log[3]/Log[10], 0.4771212547196624], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[Log[4]/Log[10], 0.6020599913279623], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[Log[5]/Log[10], 0.6989700043360186], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[Log[6]/Log[10], 0.7781512503836435], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[Log[7]/Log[10], 0.8450980400142567], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[Log[8]/Log[10], 0.9030899869919433], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[Log[9]/Log[10], 0.9542425094393248], 
+       FormBox["\"\"", TraditionalForm]}, {1, 
+       FormBox["10", TraditionalForm], {0.03, 0}}, {1, 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[Log[10]^(-1) Log[20], 1.301029995663981], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[Log[10]^(-1) Log[30], 1.4771212547196622`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[Log[10]^(-1) Log[40], 1.602059991327962], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[Log[10]^(-1) Log[50], 1.6989700043360185`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[Log[10]^(-1) Log[60], 1.7781512503836432`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[Log[10]^(-1) Log[70], 1.8450980400142567`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[Log[10]^(-1) Log[80], 1.903089986991943], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[Log[10]^(-1) Log[90], 1.9542425094393245`], 
+       FormBox["\"\"", TraditionalForm]}, {2, 
+       FormBox[
+        SuperscriptBox["10", "\"2\""], TraditionalForm], {0.03, 0}}, {2, 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[Log[10]^(-1) Log[200], 2.301029995663981], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[Log[10]^(-1) Log[300], 2.477121254719662], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[Log[10]^(-1) Log[400], 2.602059991327962], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[Log[10]^(-1) Log[500], 2.6989700043360183`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[Log[10]^(-1) Log[600], 2.778151250383643], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[Log[10]^(-1) Log[700], 2.8450980400142565`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[Log[10]^(-1) Log[800], 2.903089986991943], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[Log[10]^(-1) Log[900], 2.9542425094393243`], 
+       FormBox["\"\"", TraditionalForm]}, {3, 
+       FormBox[
+        SuperscriptBox["10", "\"3\""], TraditionalForm], {0.03, 0}}, {3, 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[Log[10]^(-1) Log[2000], 3.301029995663981], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[Log[10]^(-1) Log[3000], 3.4771212547196617`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[Log[10]^(-1) Log[4000], 3.6020599913279616`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[Log[10]^(-1) Log[5000], 3.6989700043360187`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[Log[10]^(-1) Log[6000], 3.7781512503836425`], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[Log[10]^(-1) Log[7000], 3.845098040014256], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[Log[10]^(-1) Log[8000], 3.903089986991943], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[Log[10]^(-1) Log[9000], 3.9542425094393243`], 
+       FormBox["\"\"", TraditionalForm]}, {4, 
+       FormBox[
+        SuperscriptBox["10", "\"4\""], TraditionalForm], {0.03, 0}}, {4, 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[Log[10]^(-1) Log[20000], 4.30102999566398], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[Log[10]^(-1) Log[30000], 4.477121254719662], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[Log[10]^(-1) Log[40000], 4.602059991327962], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[Log[10]^(-1) Log[50000], 4.698970004336018], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[Log[10]^(-1) Log[60000], 4.778151250383643], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[Log[10]^(-1) Log[70000], 4.845098040014256], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[Log[10]^(-1) Log[80000], 4.903089986991943], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[Log[10]^(-1) Log[90000], 4.954242509439324], 
+       FormBox["\"\"", TraditionalForm]}, {5, 
+       FormBox[
+        SuperscriptBox["10", "\"5\""], TraditionalForm], {0.03, 0}}, {5, 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[Log[10]^(-1) Log[200000], 5.30102999566398], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[Log[10]^(-1) Log[300000], 5.477121254719662], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[Log[10]^(-1) Log[400000], 5.602059991327962], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[Log[10]^(-1) Log[500000], 5.698970004336018], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[Log[10]^(-1) Log[600000], 5.778151250383643], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[Log[10]^(-1) Log[700000], 5.845098040014256], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[Log[10]^(-1) Log[800000], 5.903089986991943], 
+       FormBox["\"\"", TraditionalForm]}, {
+       NCache[Log[10]^(-1) Log[900000], 5.954242509439324], 
+       FormBox["\"\"", TraditionalForm]}, {6, 
+       FormBox[
+        SuperscriptBox["10", "\"6\""], TraditionalForm], {0.03, 0}}}, {}}},
+  FrameTicksStyle->{
+    Directive[FontFamily -> "Times", FontSize -> 18]},
+  GridLines->{None, None},
+  GridLinesStyle->Directive[
+    AbsoluteThickness[0.5], 
+    Opacity[0.5]],
+  ImagePadding->All,
+  ImageSize->{412.34632873535156`, Automatic},
+  ImageSizeRaw->{{180}, {180}},
+  LabelStyle->{
+    GrayLevel[0]},
+  Method->{"DefaultBoundaryStyle" -> Directive[
+      GrayLevel[0]], 
+    "DefaultGraphicsInteraction" -> {
+     "Version" -> 1.2, "TrackMousePosition" -> {True, False}, 
+      "Effects" -> {
+       "Highlight" -> {"ratio" -> 2}, "HighlightPoint" -> {"ratio" -> 2}, 
+        "Droplines" -> {
+         "freeformCursorMode" -> True, 
+          "placement" -> {"x" -> "All", "y" -> "None"}}}}, "DefaultMeshStyle" -> 
+    AbsolutePointSize[6], "ScalingFunctions" -> None, 
+    "CoordinatesToolOptions" -> {"DisplayFunction" -> ({
+        (Identity[#]& )[
+         Part[#, 1]], 
+        (Identity[#]& )[
+         Part[#, 2]]}& ), "CopiedValueFunction" -> ({
+        (Identity[#]& )[
+         Part[#, 1]], 
+        (Identity[#]& )[
+         Part[#, 2]]}& )}},
+  PlotRange->{{-5, 3}, {-43.904503412945935`, -22.014989065958247`}},
+  PlotRangeClipping->True,
+  PlotRangePadding->{{
+     Scaled[0.02], 
+     Scaled[0.02]}, {
+     Scaled[0.05], 
+     Scaled[0.05]}},
+  Ticks->{Automatic, Automatic},
+  TicksStyle->Directive[
+    GrayLevel[0], FontSize -> 12]]], "Output",
+ CellLabel->"Out[25]=",ExpressionUUID->"90dbfd09-942f-4f97-ac64-9fc4d55b5d0c"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
@@ -4080,31 +4053,31 @@ Notebook[{
 Cell[CellGroupData[{
 Cell[580, 22, 83, 0, 76, "Title",ExpressionUUID->"694daca7-a5af-45c0-bdab-1648ff33973a"],
 Cell[666, 24, 155, 2, 34, "Input",ExpressionUUID->"2a8ed529-2120-4de5-93c9-0946e23f8280"],
-Cell[824, 28, 2536, 66, 108, "Input",ExpressionUUID->"5b60177f-7633-4967-a968-4e4440c72086"],
+Cell[824, 28, 2535, 66, 108, "Input",ExpressionUUID->"5b60177f-7633-4967-a968-4e4440c72086"],
 Cell[CellGroupData[{
-Cell[3385, 98, 101, 0, 71, "Section",ExpressionUUID->"41e8cc54-3ff7-4d62-9aea-560ba8c16f7c"],
+Cell[3384, 98, 101, 0, 71, "Section",ExpressionUUID->"41e8cc54-3ff7-4d62-9aea-560ba8c16f7c"],
 Cell[CellGroupData[{
-Cell[3511, 102, 113, 0, 41, "Subsection",ExpressionUUID->"5fc7b59c-be14-4bd6-83fc-9853d16730d4"],
-Cell[3627, 104, 333, 8, 70, "Input",ExpressionUUID->"f3f14777-4e8b-4933-b1ed-14b689cd8116"],
+Cell[3510, 102, 380, 10, 42, "Subsection",ExpressionUUID->"5fc7b59c-be14-4bd6-83fc-9853d16730d4"],
+Cell[3893, 114, 427, 11, 89, "Input",ExpressionUUID->"f3f14777-4e8b-4933-b1ed-14b689cd8116"],
 Cell[CellGroupData[{
-Cell[3985, 116, 7739, 235, 374, "Input",ExpressionUUID->"2f4d08f0-22c8-4ff8-913d-2d5d599bba20"],
-Cell[11727, 353, 36642, 754, 275, "Output",ExpressionUUID->"418fdf48-d187-41cd-be35-69172ee23858"]
+Cell[4345, 129, 7734, 234, 374, "Input",ExpressionUUID->"2f4d08f0-22c8-4ff8-913d-2d5d599bba20"],
+Cell[12082, 365, 34833, 715, 280, "Output",ExpressionUUID->"90dbfd09-942f-4f97-ac64-9fc4d55b5d0c"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[48430, 1114, 85, 0, 71, "Section",ExpressionUUID->"37604d5c-9e2b-442b-a0f1-cf447d7623c7"],
+Cell[46976, 1087, 85, 0, 71, "Section",ExpressionUUID->"37604d5c-9e2b-442b-a0f1-cf447d7623c7"],
 Cell[CellGroupData[{
-Cell[48540, 1118, 4415, 121, 250, "Input",ExpressionUUID->"61b1118a-3bf9-4410-b775-98cf747915e3"],
-Cell[52958, 1241, 33475, 662, 238, "Output",ExpressionUUID->"2e19f576-5deb-4c5a-8cbe-1cffcb61f6dc"]
+Cell[47086, 1091, 4415, 121, 250, "Input",ExpressionUUID->"61b1118a-3bf9-4410-b775-98cf747915e3"],
+Cell[51504, 1214, 33475, 662, 238, "Output",ExpressionUUID->"2e19f576-5deb-4c5a-8cbe-1cffcb61f6dc"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[86470, 1908, 5742, 163, 231, "Input",ExpressionUUID->"69232d6a-9ded-41b8-8041-4b2c21439da9"],
-Cell[92215, 2073, 39637, 767, 349, "Output",ExpressionUUID->"745eb64b-c70c-4efc-b4c5-9607eee506c6"]
+Cell[85016, 1881, 5742, 163, 231, "Input",ExpressionUUID->"69232d6a-9ded-41b8-8041-4b2c21439da9"],
+Cell[90761, 2046, 39637, 767, 349, "Output",ExpressionUUID->"745eb64b-c70c-4efc-b4c5-9607eee506c6"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[131889, 2845, 1119, 31, 70, "Input",ExpressionUUID->"74d93878-809a-406e-a352-559843ac61c4"],
-Cell[133011, 2878, 61886, 1179, 299, "Output",ExpressionUUID->"3a4a4df3-ee76-4799-8680-046369490ea8"]
+Cell[130435, 2818, 1119, 31, 70, "Input",ExpressionUUID->"74d93878-809a-406e-a352-559843ac61c4"],
+Cell[131557, 2851, 61886, 1179, 299, "Output",ExpressionUUID->"3a4a4df3-ee76-4799-8680-046369490ea8"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
