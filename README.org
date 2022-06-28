@@ -42,7 +42,8 @@ The MeV range mass in the master plot Fig 5 is scanned in 1d by [[file:phase_tra
 
 The model is implemented in 2 files, based on [[https://github.com/clwainwright/CosmoTransitions][CosmoTransitions]]. The [[file:phase_transition/light_scalar.py][light_scalar.py]] implements the model with my personal algorithm to find the nucleation temperature.
 This runs pretty well at GeV mass range. At smaller masses, the numerical issue becomes more serious, and I use [[file:phase_transition/light_scalar_interpolation.py][light_scalar_interpolation.py]].
-This code is based on the previous one, with the solution for nucleation temperature is based on interpolation with tracing bounce action with temperature. (The previous one does not use interpolation). The function to find truevev, tunneling at T, finding nucleation temperature, the $\beta/H$ parameter are all implemented by my own.
+This code is based on the previous one, with the solution for nucleation temperature is based on interpolation with tracing bounce action with temperature. (The previous one does not use interpolation). The function to find truevev, tunneling at T, finding nucleation temperature, the $\beta/H$ parameter,
+and the $\alpha$ parameter are all implemented by my own.
 This model suffers from numerical issue due to small masses. =CosmoTransitions= sometimes fails to trace the minimum and thus cannot find phase transition.
 
 * Signals
