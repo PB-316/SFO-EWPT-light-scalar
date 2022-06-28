@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    192880,       4028]
-NotebookOptionsPosition[    190897,       3984]
-NotebookOutlinePosition[    191300,       4000]
-CellTagsIndexPosition[    191257,       3997]
+NotebookDataLength[    192857,       4027]
+NotebookOptionsPosition[    190874,       3983]
+NotebookOutlinePosition[    191277,       3999]
+CellTagsIndexPosition[    191234,       3996]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -2819,16 +2819,15 @@ Cell[BoxData[
         RowBox[{
          RowBox[{"Style", "[", 
           RowBox[{
-          "\"\<\!\(\*SubscriptBox[\(m\), \(S\)]\) = 5 GeV\\n sin\[Theta] = \
-0.24\>\"", ",", 
+          "\"\<\!\(\*SubscriptBox[\(m\), \(S\)]\) = 5 MeV\\n sin\[Theta] = \
+0.00012\>\"", ",", 
            RowBox[{"FontFamily", "\[Rule]", "\"\<Times\>\""}], ",", 
            RowBox[{"FontSize", "\[Rule]", "14"}]}], "]"}], ",", 
          RowBox[{"RoundingRadius", "\[Rule]", "5"}]}], "]"}], ",", 
        RowBox[{"{", 
         RowBox[{"2.2", ",", 
-         RowBox[{"-", "11"}]}], "}"}]}], "]"}], "}"}]}]}], "]"}]], "Input",
- CellLabel->
-  "In[153]:=",ExpressionUUID->"74d93878-809a-406e-a352-559843ac61c4"],
+         RowBox[{"-", "11"}]}], "}"}]}], "]"}], "}"}]}]}], "]"}]], "Input",Exp\
+ressionUUID->"74d93878-809a-406e-a352-559843ac61c4"],
 
 Cell[BoxData[
  GraphicsBox[{{{{}, {}, 
@@ -4025,8 +4024,8 @@ Cell[84653, 1877, 5741, 163, 310, "Input",ExpressionUUID->"69232d6a-9ded-41b8-80
 Cell[90397, 2042, 38978, 752, 349, "Output",ExpressionUUID->"1cdd1f21-6c1f-445a-a35d-fa526f147c39"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[129412, 2799, 1118, 31, 89, "Input",ExpressionUUID->"74d93878-809a-406e-a352-559843ac61c4"],
-Cell[130533, 2832, 60324, 1147, 299, "Output",ExpressionUUID->"5ca8e5ab-6210-4fdd-89a2-343bc7f0773a"]
+Cell[129412, 2799, 1095, 30, 89, "Input",ExpressionUUID->"74d93878-809a-406e-a352-559843ac61c4"],
+Cell[130510, 2831, 60324, 1147, 299, "Output",ExpressionUUID->"5ca8e5ab-6210-4fdd-89a2-343bc7f0773a"]
 }, Open  ]]
 }, Open  ]]
 }, Open  ]]
