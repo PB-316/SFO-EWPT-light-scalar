@@ -27,7 +27,7 @@ Vacuum stability is discussed at 1-loop level. Potential setup, renormalization 
 Tunneling rate is computed with the help of [[https://github.com/rsato64/SimpleBounce][SimpleBounce]].
 The code =BP1.cc= to =BP4.cc= are trials for tunneling at the 4 corners of the final combined plot left panel. The result are recorded in the same mathematica file. The code [[file:model_setup/BPeg.cc][BPeg.cc]] is for the benchmark point to generate the tunneling path plot. The [[file:model_setup/BPeg_2.cc][BPeg_2.cc]] is repeatedly used for every data point to generate Figure 8.
 * Phase Transition
-The phase transition is calculated both semi-analytically using the high-temperature expansion and in full numerical analysis. The [[file:phase_transition/Veff.nb][Mathematica file]] tried the SM case which confirmed that the high-T agrees with the lattice best. In this model it is very similar. This is tried by jupyter notebook but deleted later. For this reason, the high-T expansion is applied in the final result.
+The phase transition is calculated both semi-analytically using the high-temperature expansion and in full numerical analysis. The [[file:phase_transition/Veff.nb][Mathematica file]] tried the SM case which confirmed that the high-T agrees with the lattice best. In this model it is very similar. This is tried by jupyter notebook but deleted later. For this reason, the high-T expansion is applied in the final result. The [[file:phase_transition/test.ipynb][jupyter notebook]] is used for testing. It's quite a mess right now.
 ** High-temperature expansion
 The high-temperature expansion of the scalar effective potential offers a convenient way to perform analytical computation. The analytical calculation of high-T effective potential are calculated in [[file:phase_transition/highT.nb][Mathematica code]]. Plots can also be find in the same Mathematica code.
 
@@ -46,4 +46,4 @@ This code is based on the previous one, with the solution for nucleation tempera
 This model suffers from numerical issue due to small masses. =CosmoTransitions= sometimes fails to trace the minimum and thus cannot find phase transition.
 
 * Signals
-All experimental signals are implemented in the main code, while the data can be found in the folder [[file:probe/][probe]].
+All experimental signals are implemented in the main code, while the data can be found in the folder [[file:probe/][probe]]. Specifically, the GW signal is finished by [[file:phase_transition/GW.nb][GW.nb]], showing that it fails.
