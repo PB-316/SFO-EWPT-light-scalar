@@ -21,10 +21,10 @@ class MyModel : public GenericModel{
     double v;
 	  MyModel(){
 	  	setNphi(2);
-        lambda = 0.0994001;
-        A = 0.280255;
-        muH = 0.821746;
-        muS = 0.67082;
+        lambda = 0.123091;
+        A = 0.181671;
+        muH = 0.904833;
+        muS = 0.375485;
         g = 0.65;
         gY = 0.36;
         yt = 0.9945;
